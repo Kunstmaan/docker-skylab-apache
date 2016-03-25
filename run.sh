@@ -1,6 +1,10 @@
 #!/bin/bash
-chown www-data:www-data /app -R
 
+sed -i "s|DOCUMENT_ROOT|$DOCUMENT_ROOT|g" /etc/apache2/sites-available/000-default.conf && \
+sed -i "s|APACHE_ENV|$APACHE_ENV|g" /etc/apache2/sites-available/000-default.conf && \
+
+mkdir -p /var/lock/apache2
+mkdir -p /var/run/apache2/
 source /etc/apache2/envvars
 tail -F /var/log/apache2/* &
 exec apache2 -D FOREGROUND
