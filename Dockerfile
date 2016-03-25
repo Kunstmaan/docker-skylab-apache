@@ -3,6 +3,7 @@ FROM alpine:latest
 RUN apk --update add apache2 apache2-proxy-html apache2-proxy apache2-utils libxml2-dev sed && \
     rm -rf /var/cache/apk/*  && \
     mkdir /app && \
+    mkdir -p /run/apache2/ && \
     chown -R apache:apache /app && \
     mkdir -p /scripts/pre-exec.d && \
     mkdir -p /scripts/pre-init.d && \
