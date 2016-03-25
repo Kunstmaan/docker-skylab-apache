@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk --update add apache2 apache2-proxy-html apache2-proxy apache2-utils libxml2 && \
+RUN apk --update add apache2 apache2-proxy-html apache2-proxy apache2-utils libxml2-dev && \
     rm -rf /var/cache/apk/*  && \
     mkdir /app && \
     chown -R apache:apache /app && \
