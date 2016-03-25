@@ -12,6 +12,6 @@ ADD run.sh /scripts/run.sh
 
 WORKDIR /app
 
-ENTRYPOINT ["/scripts/run.sh"]
+CMD ["/scripts/run.sh"]
 
 EXPOSE 80
