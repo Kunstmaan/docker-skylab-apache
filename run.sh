@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sed -i "s|DOCUMENT_ROOT|$DOCUMENT_ROOT|g" /etc/apache2/sites-available/000-default.conf && \
-sed -i "s|APACHE_ENV|$APACHE_ENV|g" /etc/apache2/sites-available/000-default.conf && \
+sed -i "s|FALLBACK_DOMAIN|$FALLBACK_DOMAIN|g" /etc/apache2/sites-available/000-default.conf && \
 
 mkdir -p /var/lock/apache2
 mkdir -p /var/run/apache2/
