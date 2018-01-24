@@ -8,7 +8,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C
 
 RUN echo 'deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main' >> /etc/apt/sources.list && \
     apt-get -y -q update && \
-    apt-get -y -q install apache2 && \
+    apt-get -y -q install apache2 vim && \
     apt-get -y -q autoremove && \
     apt-get -y -q clean && \
     rm -rf /var/lib/apt/lists/*
