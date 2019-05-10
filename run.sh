@@ -14,7 +14,7 @@ if [[ -z $FALLBACK_DOMAIN ]]; then
   sed -i "/BEGIN FALLBACK DOMAIN/,/END FALLBACK DOMAIN/d" /etc/apache2/sites-available/000-default.conf
 else
   if [[ $FALLBACK_DOMAIN != http* ]]; then
-    FALLBACK_DOMAIN=https://$FALLBACK_DOMAIN
+    FALLBACK_DOMAIN=http://$FALLBACK_DOMAIN
   fi
   sed -i "s|FALLBACK_DOMAIN|$FALLBACK_DOMAIN|g" /etc/apache2/sites-available/000-default.conf
 fi

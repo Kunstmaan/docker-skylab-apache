@@ -4,7 +4,7 @@ MAINTAINER Ruud Denviel <ruud.denivel@kunstmaan.be>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E5267A6C
 
 RUN echo 'deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main' >> /etc/apt/sources.list && \
     apt-get -y -q update && \
